@@ -9,7 +9,7 @@ LAST_PORT=2000
 USERNAME="onet"
 PASSWORD="onet"
 
-INTERFACE="eth0"
+INTERFACE="enp1s0"
 # Generate hashed password
 HASHED_PASSWORD=$(openssl passwd -apr1 "$PASSWORD")
 
