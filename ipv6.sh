@@ -12,7 +12,7 @@ IPD=$(curl -4 -s icanhazip.com | cut -d"." -f4)
 ##
 if [ $IPC == 4 ]
 then
-   tee -a /etc/sysconfig/network-scripts/ifcfg-eth0 <<-EOF
+   tee -a /etc/sysconfig/network-scripts/ifcfg-enp1s0 <<-EOF
 	IPV6INIT=yes
 	IPV6_AUTOCONF=no
 	IPV6_DEFROUTE=yes
@@ -23,7 +23,7 @@ then
 	EOF
 elif [ $IPC == 5 ]
 then
-   tee -a /etc/sysconfig/network-scripts/ifcfg-eth0 <<-EOF
+   tee -a /etc/sysconfig/network-scripts/ifcfg-enp1s0 <<-EOF
 	IPV6INIT=yes
 	IPV6_AUTOCONF=no
 	IPV6_DEFROUTE=yes
@@ -33,7 +33,7 @@ then
 	IPV6_DEFAULTGW=2403:6a40:0:41::1
 	EOF
 else
-	tee -a /etc/sysconfig/network-scripts/ifcfg-eth0 <<-EOF
+	tee -a /etc/sysconfig/network-scripts/ifcfg-enp1s0 <<-EOF
 	IPV6INIT=yes
 	IPV6_AUTOCONF=no
 	IPV6_DEFROUTE=yes
